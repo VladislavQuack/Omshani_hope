@@ -120,7 +120,7 @@ export default function AboutPage({ onBack }: AboutPageProps) {
       </motion.button>
 
       <motion.h1
-        className="text-2xl font-light text-ocean-50 mb-2 tracking-wide"
+        className="text-3xl sm:text-4xl font-light text-white mb-3 tracking-wide"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.1 }}
@@ -141,11 +141,11 @@ export default function AboutPage({ onBack }: AboutPageProps) {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
       >
-        <p className="text-ocean-100/80 text-sm leading-relaxed mb-3">
-          Мы - центр йога-терапии <span className="text-ocean-200 font-medium">Ом Шани</span> в Магнитогорске. Находимся по адресу Магнитогорск, ул.Доменщиков 15.
+        <p className="text-ocean-50/95 text-base sm:text-lg leading-relaxed mb-4">
+          Мы - центр йога-терапии <span className="text-white font-semibold">Ом Шани</span> в Магнитогорске. Находимся по адресу Магнитогорск, ул. Доменщиков 15.
         </p>
 
-        <p className="text-ocean-100/60 text-sm leading-relaxed">
+        <p className="text-ocean-100/80 text-base sm:text-lg leading-relaxed">
           В нашем центре вас ждут практики по хатха-йоге, йогатерапии спины, 
           йоге-мудре и многое другое. 
           Так же к вашим услугам наши специалисты по ведической астрологии, 
@@ -153,8 +153,8 @@ export default function AboutPage({ onBack }: AboutPageProps) {
           массаж и практику гвоздестояния.
         </p>
 
-        <div className="mt-4 px-4 py-3 glass-card rounded-2xl">
-          <p className="text-center text-ocean-100/90 text-base sm:text-lg leading-relaxed italic drop-shadow-md">
+        <div className="mt-5 px-5 py-4 glass-card rounded-2xl">
+          <p className="text-center text-white text-lg sm:text-xl leading-relaxed italic drop-shadow-md">
             «Меняя своё тело, ты меняешь пространство вокруг себя!»
           </p>
         </div>
@@ -167,22 +167,22 @@ export default function AboutPage({ onBack }: AboutPageProps) {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3 }}
       >
-        <div className="flex items-center justify-between mb-3">
-          <h2 className="text-lg font-light text-ocean-200 tracking-wide">
+        <div className="flex items-center justify-between mb-4">
+          <h2 className="text-xl sm:text-2xl font-light text-ocean-100 tracking-wide">
             Галерея
           </h2>
-          <div className="flex items-center gap-1">
+          <div className="flex items-center gap-2">
             <button
-              className="w-7 h-7 rounded-full glass flex items-center justify-center text-ocean-200 active:scale-90 transition-transform"
+              className="w-9 h-9 rounded-full glass flex items-center justify-center text-ocean-100 active:scale-90 transition-transform"
               onClick={() => scrollTo(activeIdx - 1)}
             >
-              <ChevronLeft size={14} />
+              <ChevronLeft size={20} />
             </button>
             <button
-              className="w-7 h-7 rounded-full glass flex items-center justify-center text-ocean-200 active:scale-90 transition-transform"
+              className="w-9 h-9 rounded-full glass flex items-center justify-center text-ocean-100 active:scale-90 transition-transform"
               onClick={() => scrollTo(activeIdx + 1)}
             >
-              <ChevronRight size={14} />
+              <ChevronRight size={20} />
             </button>
           </div>
         </div>
@@ -190,25 +190,25 @@ export default function AboutPage({ onBack }: AboutPageProps) {
         {/* Scrollable row */}
         <div
           ref={scrollRef}
-          className="flex gap-3 overflow-x-auto snap-x snap-mandatory -mx-5 px-5 scrollbar-hide pb-2"
+          className="flex gap-4 overflow-x-auto snap-x snap-mandatory -mx-5 px-5 scrollbar-hide pb-2"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
           {galleryImages.map((img, i) => (
             <div
               key={i}
-              className="snap-center shrink-0 w-[75vw] max-w-xs"
+              className="snap-center shrink-0 w-[88vw] max-w-md"
             >
               <div className="glass-card rounded-2xl overflow-hidden">
                 <div className="relative">
                   <img
                     src={img.url}
                     alt={img.alt}
-                    className="w-full h-44 object-cover"
+                    className="w-full h-64 sm:h-80 object-cover"
                     loading="lazy"
                   />
                   {/* Gradient overlay at bottom of image */}
-                  <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-black/50 to-transparent" />
-                  <p className="absolute bottom-2 left-3 text-white text-xs font-medium drop-shadow-md">
+                  <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-black/60 to-transparent" />
+                  <p className="absolute bottom-3 left-4 text-white text-sm sm:text-base font-semibold drop-shadow-md">
                     {img.caption}
                   </p>
                 </div>
@@ -218,14 +218,14 @@ export default function AboutPage({ onBack }: AboutPageProps) {
         </div>
 
         {/* Dots */}
-        <div className="flex justify-center gap-1.5 mt-3">
+        <div className="flex justify-center gap-2 mt-4">
           {galleryImages.map((_, i) => (
             <button
               key={i}
               className={`rounded-full transition-all duration-300 ${
                 i === activeIdx
-                  ? "w-5 h-1.5 bg-ocean-300"
-                  : "w-1.5 h-1.5 bg-ocean-300/30"
+                  ? "w-6 h-2 bg-ocean-300"
+                  : "w-2 h-2 bg-ocean-300/30"
               }`}
               onClick={() => scrollTo(i)}
             />
@@ -235,7 +235,7 @@ export default function AboutPage({ onBack }: AboutPageProps) {
 
       {/* Values */}
       <motion.h2
-        className="text-lg font-light text-ocean-200 mb-3 tracking-wide"
+        className="text-xl sm:text-2xl font-light text-ocean-100 mb-4 tracking-wide"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.4 }}
@@ -252,10 +252,10 @@ export default function AboutPage({ onBack }: AboutPageProps) {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.45 + i * 0.1 }}
           >
-            <div className="text-ocean-300 mt-0.5">{value.icon}</div>
+            <div className="text-ocean-200 mt-0.5">{value.icon}</div>
             <div>
-              <h3 className="text-ocean-100 text-sm font-medium mb-1">{value.title}</h3>
-              <p className="text-ocean-100/50 text-xs leading-relaxed">{value.desc}</p>
+              <h3 className="text-white text-base font-semibold mb-1">{value.title}</h3>
+              <p className="text-ocean-100/75 text-sm leading-relaxed">{value.desc}</p>
             </div>
           </motion.div>
         ))}
@@ -263,15 +263,15 @@ export default function AboutPage({ onBack }: AboutPageProps) {
 
       {/* Quote */}
       <motion.div
-        className="mt-6 text-center"
+        className="mt-8 text-center"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.8 }}
       >
-        <p className="text-ocean-300/40 text-xs italic leading-relaxed">
+        <p className="text-ocean-100/60 text-sm sm:text-base italic leading-relaxed">
           «Йога — это путешествие себя, через себя, к себе»
         </p>
-        <p className="text-ocean-300/25 text-[10px] mt-1">— Бхагавад-гита</p>
+        <p className="text-ocean-100/40 text-xs sm:text-sm mt-1">— Бхагавад-гита</p>
       </motion.div>
     </motion.div>
   );

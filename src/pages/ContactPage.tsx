@@ -51,7 +51,7 @@ export default function ContactPage({ onBack }: ContactPageProps) {
       </motion.button>
 
       <motion.h1
-        className="text-2xl font-light text-ocean-50 mb-2 tracking-wide"
+        className="text-3xl sm:text-4xl font-light text-white mb-3 tracking-wide"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.1 }}
@@ -77,15 +77,15 @@ export default function ContactPage({ onBack }: ContactPageProps) {
           >
             <div className="text-ocean-300">{contact.icon}</div>
             <div>
-              <p className="text-ocean-100/40 text-[10px] uppercase tracking-wider">{contact.label}</p>
+              <p className="text-ocean-100/60 text-xs uppercase tracking-wider mb-0.5">{contact.label}</p>
 
               {"hours" in contact && contact.hours ? (
-                <div className="text-ocean-100 text-sm leading-relaxed">
+                <div className="text-white text-base leading-relaxed">
                   <p>{contact.hours.line1}</p>
                   <p>{contact.hours.line2}</p>
                 </div>
               ) : (
-                <p className="text-ocean-100 text-sm">{contact.value}</p>
+                <p className="text-white text-base">{contact.value}</p>
               )}
             </div>
           </motion.div>
@@ -99,29 +99,29 @@ export default function ContactPage({ onBack }: ContactPageProps) {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5 }}
       >
-        <h2 className="text-ocean-200 text-sm font-medium mb-3 tracking-wide">Мы в соцсетях</h2>
+        <h2 className="text-ocean-100 text-base font-medium mb-3 tracking-wide">Мы в соцсетях</h2>
         <div className="flex gap-3">
           <motion.a
             href="https://vk.com/omshani"
             target="_blank"
             rel="noreferrer noopener"
-            className="glass-card rounded-xl p-3 flex items-center gap-2"
+            className="glass-card rounded-xl p-3.5 flex items-center gap-2.5"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <Camera size={18} className="text-ocean-300" />
-            <span className="text-ocean-100 text-xs">vk.com/omshani</span>
+            <Camera size={20} className="text-ocean-200" />
+            <span className="text-white text-sm">vk.com/omshani</span>
           </motion.a>
           <motion.a
             href="https://t.me/omshani_mgn"
             target="_blank"
             rel="noreferrer noopener"
-            className="glass-card rounded-xl p-3 flex items-center gap-2"
+            className="glass-card rounded-xl p-3.5 flex items-center gap-2.5"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <Send size={18} className="text-ocean-300" />
-            <span className="text-ocean-100 text-xs">t.me/omshani_mgn</span>
+            <Send size={20} className="text-ocean-200" />
+            <span className="text-white text-sm">t.me/omshani_mgn</span>
           </motion.a>
         </div>
       </motion.div>
@@ -133,7 +133,7 @@ export default function ContactPage({ onBack }: ContactPageProps) {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.6 }}
       >
-        <h2 className="text-ocean-200 text-sm font-medium mb-3 tracking-wide">Как нас найти</h2>
+        <h2 className="text-ocean-100 text-base font-medium mb-3 tracking-wide">Как нас найти</h2>
         <div className="w-full h-64 rounded-xl overflow-hidden">
           <iframe
             src="https://yandex.ru/map-widget/v1/?ll=58.964113%2C53.371467&z=16&pt=58.964113%2C53.371467%2Cpm2rdm"
@@ -149,12 +149,12 @@ export default function ContactPage({ onBack }: ContactPageProps) {
 
       {/* CTA */}
       <motion.div
-        className="mt-6 text-center"
+        className="mt-8 text-center"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.8 }}
       >
-        <p className="text-ocean-300/40 text-xs">
+        <p className="text-ocean-100/60 text-sm">
           Ждём вас на практике!
         </p>
       </motion.div>

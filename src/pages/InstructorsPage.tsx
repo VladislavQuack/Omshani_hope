@@ -64,7 +64,7 @@ export default function InstructorsPage({ onBack }: InstructorsPageProps) {
       </motion.button>
 
       <motion.h1
-        className="text-2xl font-light text-ocean-50 mb-2 tracking-wide"
+        className="text-3xl sm:text-4xl font-light text-white mb-3 tracking-wide"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.1 }}
@@ -94,23 +94,23 @@ export default function InstructorsPage({ onBack }: InstructorsPageProps) {
               >
                 {instructor.initials}
               </div>
-              <div>
-                <h3 className="text-ocean-50 text-sm font-medium">{instructor.name}</h3>
-                <p className="text-ocean-300/60 text-xs">{instructor.role}</p>
-              </div>
+            <div>
+              <h3 className="text-white text-lg font-semibold">{instructor.name}</h3>
+              <p className="text-ocean-200/80 text-sm">{instructor.role}</p>
+            </div>
             </div>
 
-            <p className="text-ocean-100/60 text-xs leading-relaxed mb-3">
+            <p className="text-ocean-100/80 text-sm leading-relaxed mb-3">
               {instructor.description}
             </p>
 
             <div className="flex flex-wrap gap-2">
-              <span className="inline-flex items-center gap-1 text-[10px] text-ocean-300/70 bg-ocean-800/40 px-2 py-1 rounded-full">
-                <Award size={10} />
+              <span className="inline-flex items-center gap-1 text-xs text-ocean-100/80 bg-ocean-800/50 px-2.5 py-1.5 rounded-full">
+                <Award size={12} />
                 {instructor.experience}
               </span>
-              <span className="inline-flex items-center gap-1 text-[10px] text-ocean-300/70 bg-ocean-800/40 px-2 py-1 rounded-full">
-                <BookOpen size={10} />
+              <span className="inline-flex items-center gap-1 text-xs text-ocean-100/80 bg-ocean-800/50 px-2.5 py-1.5 rounded-full">
+                <BookOpen size={12} />
                 {instructor.specialty}
               </span>
             </div>

@@ -150,7 +150,7 @@ export default function ClassesPage({ onBack, onBook }: ClassesPageProps) {
       </motion.button>
 
       <motion.h1
-        className="mb-2 text-2xl font-light tracking-wide text-ocean-50"
+        className="mb-3 text-3xl sm:text-4xl font-light tracking-wide text-white"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.1 }}
@@ -158,7 +158,7 @@ export default function ClassesPage({ onBack, onBook }: ClassesPageProps) {
         Расписание
       </motion.h1>
       <motion.div
-        className="mb-5 h-0.5 w-12 bg-ocean-400/50"
+        className="mb-6 h-0.5 w-12 bg-ocean-400/50"
         initial={{ width: 0 }}
         animate={{ width: 48 }}
         transition={{ delay: 0.2, duration: 0.5 }}
@@ -177,10 +177,10 @@ export default function ClassesPage({ onBack, onBook }: ClassesPageProps) {
           return (
             <button
               key={day.id}
-              className={`relative shrink-0 rounded-xl px-3.5 py-2 text-base transition-all ${
+              className={`relative shrink-0 rounded-xl px-4 py-2.5 text-lg sm:text-xl transition-all ${
                 isActive
-                  ? "text-ocean-50 font-semibold drop-shadow-sm"
-                  : "text-ocean-200/95 font-semibold active:scale-95"
+                  ? "text-white font-semibold drop-shadow-sm"
+                  : "text-ocean-100 font-semibold active:scale-95"
               }`}
               style={
                 isActive
@@ -214,13 +214,13 @@ export default function ClassesPage({ onBack, onBook }: ClassesPageProps) {
         {(["light", "green"] as RoomId[]).map((r) => (
           <div key={r} className="flex items-center gap-1.5">
             <span className={`h-2 w-2 rounded-full ${ROOM_LABELS[r].dot}`} />
-            <span className="text-[11px] text-ocean-300/60">{ROOM_LABELS[r].name}</span>
+            <span className="text-xs sm:text-sm text-ocean-200/80">{ROOM_LABELS[r].name}</span>
           </div>
         ))}
       </motion.div>
 
       <motion.h2
-        className="mb-3 text-sm font-medium tracking-wide text-ocean-200"
+        className="mb-4 text-xl sm:text-2xl font-medium tracking-wide text-ocean-100"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3 }}
@@ -241,29 +241,29 @@ export default function ClassesPage({ onBack, onBook }: ClassesPageProps) {
             <div>
               <div className="mb-2 ml-1 flex items-center gap-1.5">
                 <span className={`h-2 w-2 rounded-full ${ROOM_LABELS.light.dot}`} />
-                <span className="text-xs font-medium tracking-wide text-ocean-200">
+                <span className="text-sm sm:text-base font-semibold tracking-wide text-ocean-100">
                   {ROOM_LABELS.light.name}
                 </span>
               </div>
-              <div className="space-y-1.5">
+              <div className="space-y-2">
                 {lightClasses.map((cls, i) => (
                   <motion.div
                     key={`l-${i}`}
-                    className="glass-card flex items-center gap-3 rounded-xl p-3"
+                    className="glass-card flex items-center gap-3 rounded-xl p-3.5"
                     initial={{ opacity: 0, x: -10 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: i * 0.04 }}
                   >
-                    <div className="text-amber-300/60">{cls.icon}</div>
+                    <div className="text-amber-300/80">{cls.icon}</div>
                     <div className="min-w-0 flex-1">
-                      <p className="text-sm text-ocean-100 whitespace-normal break-words leading-snug">{cls.name}</p>
-                      <p className="text-[10px] text-ocean-100/40 whitespace-normal break-words leading-snug">
+                      <p className="text-base text-white whitespace-normal break-words leading-snug">{cls.name}</p>
+                      <p className="text-xs text-ocean-100/60 whitespace-normal break-words leading-snug">
                         {cls.type} · {cls.instructor}
                       </p>
                     </div>
-                    <div className="flex shrink-0 items-center gap-2 rounded-lg border border-white/15 bg-white/6 px-2 py-1 ring-1 ring-ocean-400/10">
-                      <Clock size={12} className="text-ocean-50/90" />
-                      <span className="text-sm font-semibold text-ocean-50">{cls.time}</span>
+                    <div className="flex shrink-0 items-center gap-2 rounded-lg border border-white/15 bg-white/6 px-2.5 py-1.5 ring-1 ring-ocean-400/10">
+                      <Clock size={14} className="text-white/90" />
+                      <span className="text-base font-semibold text-white">{cls.time}</span>
                     </div>
                   </motion.div>
                 ))}
@@ -275,29 +275,29 @@ export default function ClassesPage({ onBack, onBook }: ClassesPageProps) {
             <div>
               <div className="mb-2 ml-1 flex items-center gap-1.5">
                 <span className={`h-2 w-2 rounded-full ${ROOM_LABELS.green.dot}`} />
-                <span className="text-xs font-medium tracking-wide text-ocean-200">
+                <span className="text-sm sm:text-base font-semibold tracking-wide text-ocean-100">
                   {ROOM_LABELS.green.name}
                 </span>
               </div>
-              <div className="space-y-1.5">
+              <div className="space-y-2">
                 {greenClasses.map((cls, i) => (
                   <motion.div
                     key={`g-${i}`}
-                    className="glass-card flex items-center gap-3 rounded-xl p-3"
+                    className="glass-card flex items-center gap-3 rounded-xl p-3.5"
                     initial={{ opacity: 0, x: -10 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.1 + i * 0.04 }}
                   >
-                    <div className="text-emerald-400/60">{cls.icon}</div>
+                    <div className="text-emerald-400/80">{cls.icon}</div>
                     <div className="min-w-0 flex-1">
-                      <p className="text-sm text-ocean-100 whitespace-normal break-words leading-snug">{cls.name}</p>
-                      <p className="text-[10px] text-ocean-100/40 whitespace-normal break-words leading-snug">
+                      <p className="text-base text-white whitespace-normal break-words leading-snug">{cls.name}</p>
+                      <p className="text-xs text-ocean-100/60 whitespace-normal break-words leading-snug">
                         {cls.type} · {cls.instructor}
                       </p>
                     </div>
-                    <div className="flex shrink-0 items-center gap-2 rounded-lg border border-white/15 bg-white/6 px-2 py-1 ring-1 ring-ocean-400/10">
-                      <Clock size={12} className="text-ocean-50/90" />
-                      <span className="text-sm font-semibold text-ocean-50">{cls.time}</span>
+                    <div className="flex shrink-0 items-center gap-2 rounded-lg border border-white/15 bg-white/6 px-2.5 py-1.5 ring-1 ring-ocean-400/10">
+                      <Clock size={14} className="text-white/90" />
+                      <span className="text-base font-semibold text-white">{cls.time}</span>
                     </div>
                   </motion.div>
                 ))}
@@ -313,28 +313,28 @@ export default function ClassesPage({ onBack, onBook }: ClassesPageProps) {
         transition={{ delay: 0.45 }}
       >
         <button
-          className="mb-3 flex w-full items-center justify-between"
+          className="mb-4 flex w-full items-center justify-between"
           onClick={() => setExtrasOpen(!extrasOpen)}
         >
           <div className="flex items-center gap-2">
-            <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-ocean-500/30 text-ocean-200">
-              <Sparkles size={14} />
+            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-ocean-500/30 text-ocean-100">
+              <Sparkles size={16} />
             </div>
-            <h2 className="text-lg font-light tracking-wide text-ocean-100">
+            <h2 className="text-xl sm:text-2xl font-light tracking-wide text-ocean-100">
               Дополнительно
             </h2>
           </div>
           <motion.div
             animate={{ rotate: extrasOpen ? 180 : 0 }}
             transition={{ duration: 0.3 }}
-            className="text-ocean-300/60"
+            className="text-ocean-200/80"
           >
-            <ChevronDown size={18} />
+            <ChevronDown size={22} />
           </motion.div>
         </button>
 
         <motion.p
-          className="mb-3 ml-1 text-[11px] text-ocean-300/50"
+          className="mb-4 ml-1 text-sm text-ocean-200/70"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
@@ -361,13 +361,13 @@ export default function ClassesPage({ onBack, onBook }: ClassesPageProps) {
                     transition={{ delay: i * 0.07 }}
                   >
                     <div
-                      className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br ${extra.color} text-ocean-100`}
+                      className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br ${extra.color} text-ocean-50`}
                     >
                       {extra.icon}
                     </div>
                     <div>
-                      <p className="mb-0.5 text-sm font-medium text-ocean-50">{extra.name}</p>
-                      <p className="text-[11px] leading-relaxed text-ocean-100/45">
+                      <p className="mb-0.5 text-base font-semibold text-white">{extra.name}</p>
+                      <p className="text-sm leading-relaxed text-ocean-100/75">
                         {extra.description}
                       </p>
                     </div>

@@ -30,7 +30,7 @@ export default function FloatingBookingButton({ onClick }: FloatingBookingButton
       <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white/12">
         <CalendarCheck size={18} />
       </span>
-      <span className="pr-1">Записаться</span>
+      <span className="pr-1 text-base font-semibold">Записаться</span>
     </motion.button>
   );
 }

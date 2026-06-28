@@ -132,7 +132,7 @@ export default function PricesPage({ onBack, onBook }: PricesPageProps) {
       </motion.button>
 
       <motion.h1
-        className="mb-2 text-2xl font-light tracking-wide text-ocean-50"
+        className="mb-3 text-3xl sm:text-4xl font-light tracking-wide text-white"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.1 }}
@@ -140,13 +140,13 @@ export default function PricesPage({ onBack, onBook }: PricesPageProps) {
         Цены
       </motion.h1>
       <motion.div
-        className="mb-2 h-0.5 w-12 bg-ocean-400/50"
+        className="mb-3 h-0.5 w-12 bg-ocean-400/50"
         initial={{ width: 0 }}
         animate={{ width: 48 }}
         transition={{ delay: 0.2, duration: 0.5 }}
       />
       <motion.p
-        className="mb-7 text-xs text-ocean-300/50"
+        className="mb-8 text-sm sm:text-base text-ocean-100/80"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.25 }}
@@ -172,24 +172,24 @@ export default function PricesPage({ onBack, onBook }: PricesPageProps) {
         <div className="mb-5">
           <div className="mb-2.5 ml-1 flex items-center gap-2">
             <Users size={12} className="text-ocean-300/70" />
-            <span className="text-[11px] uppercase tracking-wider text-ocean-300/70">
-              Групповое · стандарт
-            </span>
+                <span className="text-xs sm:text-sm uppercase tracking-wider text-ocean-100/80">
+                  Групповое · стандарт
+                </span>
           </div>
           <div className="glass-card rounded-2xl p-4">
             <div className="flex items-center gap-3">
               <div className="flex-1 min-w-0">
-                <p className="text-sm text-ocean-50">{groupStandard.label}</p>
-                <p className="mt-0.5 text-[10px] text-ocean-300/40">
+                <p className="text-base text-white">{groupStandard.label}</p>
+                <p className="mt-0.5 text-xs text-ocean-100/70">
                   {groupStandard.description}
                 </p>
               </div>
               <div className="shrink-0 text-right">
-                <p className="text-base font-light text-ocean-100">
+                <p className="text-xl font-light text-white">
                   {groupStandard.price}
-                  <span className="ml-0.5 text-[10px] text-ocean-300/40">₽</span>
+                  <span className="ml-0.5 text-xs text-ocean-100/70">₽</span>
                 </p>
-                <p className="text-[10px] text-ocean-300/40">{groupStandard.duration}</p>
+                <p className="text-xs text-ocean-100/70">{groupStandard.duration}</p>
               </div>
             </div>
           </div>
@@ -199,9 +199,9 @@ export default function PricesPage({ onBack, onBook }: PricesPageProps) {
           <div className="mb-2.5 ml-1 flex items-center justify-between gap-2">
             <div className="flex items-center gap-2">
               <ShieldCheck size={12} className="text-ocean-300/70" />
-              <span className="text-[11px] uppercase tracking-wider text-ocean-300/70">
-                Льготные условия
-              </span>
+                <span className="text-xs sm:text-sm uppercase tracking-wider text-ocean-100/80">
+                  Льготные условия
+                </span>
             </div>
             <span className="rounded-full border border-ocean-300/20 bg-ocean-400/10 px-2 py-0.5 text-[9px] uppercase tracking-[0.2em] text-ocean-200/80">
               льготные
@@ -219,7 +219,7 @@ export default function PricesPage({ onBack, onBook }: PricesPageProps) {
           >
             <div className="glass-card rounded-[14px] overflow-hidden">
               <div className="border-b border-white/5 px-3.5 py-2.5">
-                <p className="text-[10px] leading-relaxed text-ocean-300/55">
+                <p className="text-xs leading-relaxed text-ocean-100/70">
                   Льготные разовые посещения действуют для студентов, пенсионеров
                   и утренних посетителей.
                 </p>
@@ -237,21 +237,21 @@ export default function PricesPage({ onBack, onBook }: PricesPageProps) {
                   <div className={`mt-0.5 ${item.color}`}>{item.icon}</div>
                   <div className="flex-1 min-w-0">
                     <div className="flex flex-wrap items-center gap-1.5">
-                      <p className="text-sm text-ocean-50">{item.label}</p>
-                      <span className="rounded-full bg-white/6 px-1.5 py-0.5 text-[9px] uppercase tracking-wide text-ocean-200/70">
+                      <p className="text-base text-white">{item.label}</p>
+                      <span className="rounded-full bg-white/10 px-2 py-0.5 text-xs uppercase tracking-wide text-ocean-100/80">
                         льготные
                       </span>
                     </div>
-                    <p className="mt-0.5 text-[10px] text-ocean-300/40">
+                    <p className="mt-0.5 text-xs text-ocean-100/70">
                       {item.description}
                     </p>
                   </div>
                   <div className="shrink-0 text-right">
-                    <p className="text-base font-light text-ocean-100">
+                    <p className="text-lg font-light text-white">
                       {item.price}
-                      <span className="ml-0.5 text-[10px] text-ocean-300/40">₽</span>
+                      <span className="ml-0.5 text-xs text-ocean-100/70">₽</span>
                     </p>
-                    <p className="text-[10px] text-ocean-300/40">{item.duration}</p>
+                    <p className="text-xs text-ocean-100/70">{item.duration}</p>
                   </div>
                 </motion.div>
               ))}
@@ -261,25 +261,25 @@ export default function PricesPage({ onBack, onBook }: PricesPageProps) {
 
         <div>
           <div className="mb-2.5 ml-1 flex items-center gap-2">
-            <User size={12} className="text-ocean-300/70" />
-            <span className="text-[11px] uppercase tracking-wider text-ocean-300/70">
+            <User size={14} className="text-ocean-200/80" />
+            <span className="text-xs sm:text-sm uppercase tracking-wider text-ocean-100/80">
               Индивидуальное
             </span>
           </div>
           <div className="glass-card rounded-2xl p-4">
             <div className="flex items-center gap-3">
               <div className="flex-1 min-w-0">
-                <p className="text-sm text-ocean-50">{individualSession.label}</p>
-                <p className="mt-0.5 text-[10px] text-ocean-300/40">
+                <p className="text-base text-white">{individualSession.label}</p>
+                <p className="mt-0.5 text-xs text-ocean-100/70">
                   {individualSession.description}
                 </p>
               </div>
               <div className="shrink-0 text-right">
-                <p className="text-base font-light text-ocean-100">
+                <p className="text-xl font-light text-white">
                   {individualSession.price}
-                  <span className="ml-0.5 text-[10px] text-ocean-300/40">₽</span>
+                  <span className="ml-0.5 text-xs text-ocean-100/70">₽</span>
                 </p>
-                <p className="text-[10px] text-ocean-300/40">{individualSession.duration}</p>
+                <p className="text-xs text-ocean-100/70">{individualSession.duration}</p>
               </div>
             </div>
           </div>
@@ -302,14 +302,14 @@ export default function PricesPage({ onBack, onBook }: PricesPageProps) {
 
         <div className="mb-4 glass-card rounded-2xl p-3.5">
           <div className="flex items-start gap-3">
-            <div className="mt-0.5 text-ocean-300/70">
-              <Sparkles size={15} />
+            <div className="mt-0.5 text-ocean-200/80">
+              <Sparkles size={18} />
             </div>
             <div>
-              <p className="text-xs text-ocean-100/75">
-                Все абонементы действуют <span className="text-ocean-200">5 недель</span>.
+              <p className="text-sm text-ocean-100/90">
+                Все абонементы действуют <span className="text-white font-semibold">5 недель</span>.
               </p>
-              <p className="mt-1 text-[10px] leading-relaxed text-ocean-300/45">
+              <p className="mt-1 text-xs leading-relaxed text-ocean-100/70">
                 Они различаются по типу занятий и формату посещения, а не по «заполненности».
               </p>
             </div>
@@ -344,30 +344,30 @@ export default function PricesPage({ onBack, onBook }: PricesPageProps) {
               <div className="mb-2 flex items-start justify-between gap-3">
                 <div>
                   <div className="flex flex-wrap items-center gap-1.5">
-                    <h3 className="text-base font-medium tracking-wide text-ocean-50">
+                    <h3 className="text-lg font-medium tracking-wide text-white">
                       {pass.name}
                     </h3>
                     {pass.badge && (
-                      <span className="rounded-full bg-white/6 px-2 py-0.5 text-[9px] uppercase tracking-wide text-ocean-200/70">
+                      <span className="rounded-full bg-white/10 px-2 py-0.5 text-xs uppercase tracking-wide text-ocean-100/80">
                         {pass.badge}
                       </span>
                     )}
                   </div>
-                  <p className="mt-0.5 text-[11px] text-ocean-300/55">{pass.target}</p>
+                  <p className="mt-0.5 text-xs text-ocean-100/80">{pass.target}</p>
                 </div>
                 <div className="shrink-0 text-right">
-                  <p className="text-xl font-light text-ocean-50">
+                  <p className="text-2xl font-light text-white">
                     {pass.price.toLocaleString("ru-RU")}
-                    <span className="ml-0.5 text-[11px] text-ocean-300/40">₽</span>
+                    <span className="ml-0.5 text-xs text-ocean-100/80">₽</span>
                   </p>
                 </div>
               </div>
 
-              <div className="space-y-1.5 border-t border-white/6 pt-2.5">
-                <p className="text-[11px] leading-relaxed text-ocean-100/55">
+              <div className="space-y-1.5 border-t border-white/10 pt-2.5">
+                <p className="text-xs leading-relaxed text-ocean-100/80">
                   {pass.details}
                 </p>
-                <div className="flex items-center justify-between text-[10px] text-ocean-300/45">
+                <div className="flex items-center justify-between text-xs text-ocean-100/70">
                   <span>Срок действия</span>
                   <span>5 недель</span>
                 </div>

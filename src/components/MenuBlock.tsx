@@ -21,10 +21,10 @@ export default function MenuBlock({
   size = "medium",
 }: MenuBlockProps) {
   const sizeClasses = {
-    small: "min-h-[80px]",
-    medium: "min-h-[100px]",
-    large: "min-h-[140px]",
-    tall: "min-h-[180px]",
+    small: "min-h-[96px]",
+    medium: "min-h-[120px]",
+    large: "min-h-[170px]",
+    tall: "min-h-[220px]",
   };
 
   return (
@@ -54,7 +54,7 @@ export default function MenuBlock({
         </motion.div>
       )}
       {label && (
-        <span className="text-ocean-100 text-sm font-medium tracking-wide">
+        <span className="text-ocean-50 text-base font-semibold tracking-wide">
           {label}
         </span>
       )}

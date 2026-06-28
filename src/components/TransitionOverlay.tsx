@@ -48,7 +48,7 @@ export default function TransitionOverlay({ isActive }: TransitionOverlayProps) 
             exit={{ scale: 0.8, opacity: 0 }}
             transition={{ duration: 0.4 }}
           >
-            <div className="w-28 h-28 rounded-full glass-strong flex items-center justify-center mb-4 overflow-hidden">
+            <div className="w-56 h-56 rounded-full glass-strong flex items-center justify-center mb-4 overflow-hidden">
               <LottieLoop
                 key="transition-lottie"
                 animationData={loadingAnim}

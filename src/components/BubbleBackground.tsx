@@ -14,12 +14,16 @@ export default function BubbleBackground() {
   const [bubbles, setBubbles] = useState<Bubble[]>([]);
 
   useEffect(() => {
+    // Отрицательная задержка означает, что анимация уже идёт какое-то время
+    // Пузырьки появляются из нижней части экрана, а не «зависают» сверху
+    // Длительность всегда больше абсолютного значения задержки, чтобы пузырьки
+    // начинали путь снизу и не оказывались вверху при загрузке
     const newBubbles: Bubble[] = Array.from({ length: 20 }, (_, i) => ({
       id: i,
       size: Math.random() * 20 + 4,
       left: Math.random() * 100,
-      duration: Math.random() * 15 + 10,
-      delay: Math.random() * 20,
+      duration: Math.random() * 10 + 25, // 25-35 секунд
+      delay: -(Math.random() * 20), // Отрицательная задержка: 0-20с «уже прошло»
       opacity: Math.random() * 0.3 + 0.1,
     }));
     setBubbles(newBubbles);

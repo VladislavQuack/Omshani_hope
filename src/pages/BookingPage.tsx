@@ -35,7 +35,7 @@ export default function BookingPage({ onBack }: BookingPageProps) {
       </motion.button>
 
       <motion.h1
-        className="text-2xl font-light text-ocean-50 mb-2 tracking-wide"
+        className="text-3xl sm:text-4xl font-light text-white mb-3 tracking-wide"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.1 }}
@@ -79,7 +79,7 @@ export default function BookingPage({ onBack }: BookingPageProps) {
 
       {/* Brief description */}
       <motion.p
-        className="text-ocean-100/70 text-sm text-center leading-relaxed mb-6 px-2"
+        className="text-ocean-50/90 text-base sm:text-lg text-center leading-relaxed mb-8 px-2"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3 }}
@@ -90,7 +90,7 @@ export default function BookingPage({ onBack }: BookingPageProps) {
 
       {/* Main CTA button */}
       <motion.button
-        className="w-full h-14 rounded-2xl font-medium text-base tracking-wide text-ocean-50 relative overflow-hidden"
+        className="w-full h-14 rounded-2xl font-semibold text-lg tracking-wide text-white relative overflow-hidden"
         style={{
           background:
             "linear-gradient(135deg, rgba(95, 201, 184, 0.5) 0%, rgba(42, 157, 143, 0.7) 100%)",
@@ -116,7 +116,7 @@ export default function BookingPage({ onBack }: BookingPageProps) {
         />
         <span className="relative z-10 flex items-center justify-center gap-2">
           Записаться на занятие
-          <ExternalLink size={16} />
+          <ExternalLink size={18} />
         </span>
       </motion.button>
 
@@ -127,35 +127,35 @@ export default function BookingPage({ onBack }: BookingPageProps) {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.55 }}
       >
-        <h2 className="text-ocean-200 text-sm font-medium tracking-wide mb-2">
+        <h2 className="text-ocean-100 text-base font-medium tracking-wide mb-2">
           Полезная информация
         </h2>
 
-        <div className="glass-card rounded-xl p-3 flex items-start gap-3">
+        <div className="glass-card rounded-xl p-3.5 flex items-start gap-3">
           <div className="w-1 h-10 rounded-full bg-ocean-400/50" />
           <div>
-            <p className="text-ocean-100 text-xs font-medium mb-1">Первый раз у нас?</p>
-            <p className="text-ocean-100/50 text-[11px] leading-relaxed">
+            <p className="text-white text-sm font-medium mb-1">Первый раз у нас?</p>
+            <p className="text-ocean-100/75 text-xs leading-relaxed">
               Пробное занятие — бесплатно. Возьмите с собой удобную одежду и воду.
             </p>
           </div>
         </div>
 
-        <div className="glass-card rounded-xl p-3 flex items-start gap-3">
+        <div className="glass-card rounded-xl p-3.5 flex items-start gap-3">
           <div className="w-1 h-10 rounded-full bg-ocean-400/50" />
           <div>
-            <p className="text-ocean-100 text-xs font-medium mb-1">Не получается прийти?</p>
-            <p className="text-ocean-100/50 text-[11px] leading-relaxed">
+            <p className="text-white text-sm font-medium mb-1">Не получается прийти?</p>
+            <p className="text-ocean-100/75 text-xs leading-relaxed">
               Отмените запись за 4 часа до начала — и занятие сохранится в абонементе.
             </p>
           </div>
         </div>
 
-        <div className="glass-card rounded-xl p-3 flex items-start gap-3">
+        <div className="glass-card rounded-xl p-3.5 flex items-start gap-3">
           <div className="w-1 h-10 rounded-full bg-ocean-400/50" />
           <div>
-            <p className="text-ocean-100 text-xs font-medium mb-1">Остались вопросы?</p>
-            <p className="text-ocean-100/50 text-[11px] leading-relaxed">
+            <p className="text-white text-sm font-medium mb-1">Остались вопросы?</p>
+            <p className="text-ocean-100/75 text-xs leading-relaxed">
               Позвоните нам или напишите — мы с радостью поможем подобрать практику.
             </p>
           </div>

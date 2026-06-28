@@ -88,7 +88,7 @@ export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <div className="w-28 h-28 rounded-full glass-strong flex items-center justify-center pulse-glow overflow-hidden">
+            <div className="w-56 h-56 rounded-full glass-strong flex items-center justify-center pulse-glow overflow-hidden">
               <LottieLoop animationData={loadingAnim} loop autoplay renderer="svg" />
             </div>
 
