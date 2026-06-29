@@ -24,8 +24,7 @@ html, body, #root {
 
 body {
   /* Global background for all pages */
-  /* Added a semi-transparent black overlay on top of the background image to improve contrast */
-  background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url("./assets/bgr/Bgr_main.jpg"),
+  background-image: url("./assets/bgr/Bgr_main.jpg"),
     linear-gradient(180deg, #0a3d4a 0%, #0d5259 30%, #125a66 60%, #1a7a7a 100%);
   background-size: cover;
   background-position: center;
